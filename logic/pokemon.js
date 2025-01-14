@@ -19,6 +19,7 @@ async function fetchRandomPokemon(){
   for (let i=0; i<3; i++){
     const div = document.createElement('div');
     // Fetch a random pokemon pokemon from the API and format it as a json file
+    // Adjust 6968 to the port being used
     let currentPokemon = await fetch("http://localhost:6968/api/random");
     let data = await currentPokemon.json();
 
