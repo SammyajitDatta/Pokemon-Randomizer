@@ -1,0 +1,59 @@
+<!-- File the contains display for Pokemon Randomizer application.-->
+<!DOCTYPE html>
+<html lang="en" class = "backgroundColor">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title> Pokemon Randomizer </title>
+    <script src="./logic/pokemon.js" defer></script>
+    <link rel="stylesheet" href="./style/styles.css" />
+</head>
+<body>
+    <!-- Used the Pokemon Little Root Town theme as background audio upon entering the site-->
+    <audio id="backgroundAudio" autoplay loop="true">
+        <source src="./resources/LTR.mp3" type="audio/mpeg">
+    </audio>
+    <div class ="homePage"> 
+        <div class = "container">
+            <div class = "BannerAndButton">
+                <div class = "BannerLogoandName">
+                    <h1> Pokemon Randomizer </h1>
+                    <img src = "./resources/ultralogo.png" />
+                </div>
+                <button class = "randomizer" onclick="fetchRandomPokemon()" id = "disableButton"> Randomize </button>
+            </div>
+            <!-- This is used to display the randomly generated pokemon -->
+            <div id="Pokemon" class = "PokeRandom"> </div>
+        </div>
+        <!-- This is the content that we want to export onto sites like pokemon showdown-->
+        <div class = "ExportContent">
+            <div class = "ExportAndRefresh">
+                <!-- Export content in the form usable in pokemon showdown. --> 
+                <button onclick="exportPokemon()"> 
+                    <img src="./resources/ultralogo.png"/>
+                    <p> Export </p>
+                </button>
+                <!-- Used to empty out the randomizer -->
+                <button onclick="location.reload()">
+                    <img src="./resources/refresh.png" />
+                </button>
+            </div>
+            <!-- The pokemon we will be exporting -->
+            <div class = "PokemonColumns" id = "export">
+                <textarea  readonly id = "ExportToggle" class = "emptybox" style = "display: none"> 
+                </textarea>
+                <div class = "SinglePokemonColumn" id = "pokecolumn"> 
+                    <div class = "box topBox"  id = "1"> </div>
+                    <div class = "box" id = "3"> </div>
+                    <div class = "box" id = "5"> </div>
+                </div>
+                <div class = "SinglePokemonColumn" id = "pokecolumn2"> 
+                    <div class = "box topBox" id = "2"> </div>
+                    <div class = "box" id = "4"> </div>
+                    <div class = "box" id = "6"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
