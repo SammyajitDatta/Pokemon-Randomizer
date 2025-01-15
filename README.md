@@ -5,7 +5,7 @@ The background audio is the Pokemon Little Root Town Audio.
 
 To make the program functional, 2 things must be done:
   1. Enter the backend folder and do npm install
-  2. Additionally, inside the backend a .env folder must be created where you set a port and create a MongoDB URI. Note, the port number needs to be manually adjusted in pokemon.js.
+  2. Additionally, inside the backend a .env file must be created where you set a port and create a MongoDB URI. Note, the port number needs to be manually adjusted in pokemon.js.
 
 Tech Stack:
   1. Frontend: Javascript, HTML, CSS
